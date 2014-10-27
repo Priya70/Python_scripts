@@ -25,7 +25,7 @@ import tables as tb
 from numpy import array
 from scipy import sparse
 '''
-Module containing most of my functions to clean/parse Pubmed data, update corpus, calculate word similarities, create and update Impact Factor files
+Module containing many of my functions to clean/parse Pubmed data, update corpus, calculate word similarities, create and update Impact Factor files
 '''
 
 
@@ -830,9 +830,6 @@ def vocab_list_Similarity_calculator_test(topically_sim_papers_pmids_list,user_f
     for j in range(0,num_user_papers):
          Cos_dist_array[j] = linear_kernel(user_paper_vec[j:j+1], X).flatten()
     return(np.asarray(Cos_dist_array))
-  
-  
-
   
 def create_basic_jour_IF():
     '''
